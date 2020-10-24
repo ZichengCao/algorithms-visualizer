@@ -5,6 +5,8 @@
 
 软件链接：https://pan.baidu.com/s/1uLWu_33FjrYKxrqr60U3AA  提取码：hkxr 
 
-<img src="https://img2020.cnblogs.com/blog/1470173/202010/1470173-20201023153059887-1959889292.png" style="zoom:50%;" />
+系统展示图：
 
-<img src="https://img2020.cnblogs.com/blog/1470173/202010/1470173-20201023153209049-1383322700.png" style="zoom:50%;" />
+![](Screenshots/1.png)
+
+![](Screenshots/2.png)
