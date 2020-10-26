@@ -7,6 +7,6 @@
 
 系统展示图：
 
-![](Screenshots/1.png)
+![Screenshots/1.png](Screenshots/1.png)
 
-![](Screenshots/2.png)
+![Screenshots/2.png](Screenshots/2.png)
