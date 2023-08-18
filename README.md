@@ -3,7 +3,9 @@
 
 使用 unity 实现的常见数据结构与算法可视化系统，支持常见的算法与数据结构：
 
+<div align=center>
 <img src="./Docs/modules.png" width="80%">
+</div>
 
 具体而言支持的演示功能：
 
@@ -35,32 +37,43 @@
 ## 运行实例
 
 ### 主界面
-
-<img src="./Docs/start-interface.png" width="50%">
+<div align=center>
+<img src="./Docs/start-interface.png" width="60%">
+</div>
 
 ### 演示模式
 
 以排序算法为例展示界面
 
-<img src="./Docs/merge-sort.png" width="50%">
+<div align=center>
+<img src="./Docs/merge-sort.png" width="60%">
+</div>
 
 **示例**：设定数组长度、数据类型
 
-<img src="./Docs/sort-data-type.png" width="50%">
+<div align=center>
+<img src="./Docs/sort-data-type.png" width="60%">
+</div>
 
 **示例**：多算法对比
 
-<img src="./Docs/multiple-sort.png" width="50%">
+<div align=center>
+<img src="./Docs/multiple-sort.png" width="60%">
+</div>
 
 ### 练习模式
 
-<img src="./Docs/practice.png" width="50%">
+<div align=center>
+<img src="./Docs/practice.png" width="60%">
+</div>
 
 ### 编程模式
 
 **示例**：将 0~9 依次赋值给数组
 
-<img src="./Docs/programming.png" width="50%">
+<div align=center>
+<img src="./Docs/programming.png" width="60%">
+</div>
 
 ## 系统设计
 
@@ -76,14 +89,19 @@ BasicModel 是算法（数据结构同理）演示引擎接口，声明了算法
 - `playBackward()`：逆向演示一步
 - `recordProce()`：生成算法演示步骤，赋值给 eventQueue 
 
+<div align=center>
 <img src="./Docs/baseModel.png" width="40%">
+</div>
 
 当用户选择一个算法开始演示时，系统内部会执行 recordProce方法，相当于模拟执行一遍算法，并将所有算法演示动作都存储在队列 eventQueue 中。
 
 - 正向演示时，依次取出 eventQueue 队首的 event，判断具体的 event，执行相应的动画操作，同时将出队的 event 存入 eventStack 中；
 - 逆向演示时，依次弹出 eventStack 栈顶的 event，并将 event 的参数相应“取反”，例如：MoveEvent 表示移动一个结点，正向演示时存储的移动方向是左，在逆向演示时，则应该向右移动。
 
-<img src="./Docs/algorithm-demo.png" width="60%">
+<div align=center>
+<img src="./Docs/algorithm-demo.png" width="70%">
+</div>
+
 
 ### 编程演示引擎设计
 
@@ -107,13 +125,18 @@ BasicModel 是算法（数据结构同理）演示引擎接口，声明了算法
 
 实现自动将用户输入的指令序列解释成动画演示状态，调用算法演示引擎提供的动画演示接口进行演示：
 
-<img src="./Docs/programming-demo.png" width="50%">
+<div align=center>
+<img src="./Docs/programming-demo.png" width="70%">
+</div>
+
 
 解释器模型如下，首先，对用户输入的指令序列进行解析；然后，对解析得到的 commandQueue 进行分析，得到一组动画演示动作 存入 eventQueue；最后，送入算法演示引擎部分的动画演示器进行演示。
 
 错误判断则贯穿在解析输入（词法错误）和分析指令（语法错误）的整个执行过程。
 
-<img src="./Docs/programming-interpreter.png" width="50%">
+<div align=center>
+<img src="./Docs/programming-interpreter.png" width="70%">
+</div>
 
 
 
