@@ -1,0 +1,11 @@
+void push(int data) {
+	ListNode s = new ListNode(data);
+	s.next = top;
+	top = s;
+}
+
+int pop() {
+	int temp = top.data;
+	top = top.next;
+	return temp;
+}

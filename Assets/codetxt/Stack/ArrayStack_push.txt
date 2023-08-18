@@ -1,0 +1,4 @@
+void push(int val){
+	data[top] = val;
+	top++;
+}

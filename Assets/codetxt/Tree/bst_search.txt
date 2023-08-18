@@ -1,0 +1,9 @@
+TreeNode Search(TreeNode T, int x) {
+	if (T.data == x) 
+		return T;
+	if (T.left && x < T.data)
+		return Search(T.left, x);
+	if (T.right && x > T.data)
+		return Search(T.right, x);
+	return null;
+}

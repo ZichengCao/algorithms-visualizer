@@ -1,0 +1,8 @@
+class ListNode {
+	int data;
+	ListNode next = null;
+	ListNode() { }
+	ListNode(int x) { data = x; }
+}
+
+ListNode front = null, rear = null;

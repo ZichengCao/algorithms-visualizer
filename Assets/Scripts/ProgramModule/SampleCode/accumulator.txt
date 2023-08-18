@@ -1,0 +1,6 @@
+int sum 0
+int i 0
+while i < arr.length
+assign sum arr[i]+sum
+inc i
+endwhile

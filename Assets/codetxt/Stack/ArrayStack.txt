@@ -1,0 +1,9 @@
+void push(int val){
+	data[top] = val;
+	top++;
+}
+
+int pop(){
+	top--; 
+	return data[top];
+}

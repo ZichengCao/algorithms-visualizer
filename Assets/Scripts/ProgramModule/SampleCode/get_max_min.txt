@@ -1,0 +1,12 @@
+int max arr[0]
+int min arr[0]
+int i 1
+while i < arr.length
+if arr[i] > max
+assign max arr[i]
+endif
+if arr[i] < min
+assign min arr[i]
+endif
+inc i
+endwhile

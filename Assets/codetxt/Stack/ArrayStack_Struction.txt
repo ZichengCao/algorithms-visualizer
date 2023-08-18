@@ -1,0 +1,3 @@
+const int MaxSize = 15;
+int data[MaxSize];
+int top = 0;

@@ -1,0 +1,7 @@
+void Preorder(TreeNode T) {
+	visit(T);
+	if (T.left != null)
+		Preorder(T.left);
+	if (T.right != null)
+		Preorder(T.right);
+}

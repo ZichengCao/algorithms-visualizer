@@ -1,0 +1,15 @@
+int i 0
+int j 0
+int min 0
+while i < arr.length
+assign min i
+assign j i+1
+while j < arr.length
+if arr[j] < arr[min]
+assign min j
+endif
+inc j
+endwhile
+swap arr[i] arr[min]
+inc i
+endwhile

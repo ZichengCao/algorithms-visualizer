@@ -1,0 +1,9 @@
+boolean search(int value) {
+    ListNode p = head.next;
+    while (p != null) {
+        if (p.data == value)
+            return true;
+        p = p.next;
+    }
+    return false;
+}

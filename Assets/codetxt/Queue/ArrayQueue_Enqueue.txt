@@ -1,0 +1,4 @@
+void Enqueue(int val) {
+	data[rear] = val;
+	rear = (rear + 1) % MaxSize;
+}

@@ -1,0 +1,36 @@
+void addFirst(int value) {
+    ListNode s = new ListNode(value);
+    s.next = head.next;
+    s.prior = head;
+    if (head.next != null)
+        head.next.prior = s;
+    head.next = s;
+}
+
+void addLast(int value) {
+    ListNode s = new ListNode(value);
+    ListNode p = head;
+    while (p.next != null)
+        p = p.next;
+	s.prior = p;
+    p.next = s;
+}
+
+boolean search(int value) {
+    ListNode p = head.next;
+    while (p != null) {
+        if (p.data == value)
+            return true;
+        p = p.next;
+    }
+    return false;
+}
+
+void remove(int value) {
+    ListNode p = head;
+    while (p.next != null && p.next.data != value)
+        p = p.next;
+    ListNode temp = p.next;
+    temp.next.prior = p;
+    p.next = temp.next;
+}

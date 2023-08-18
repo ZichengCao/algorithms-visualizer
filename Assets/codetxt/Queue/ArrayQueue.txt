@@ -1,0 +1,15 @@
+boolean Enqueue(int val) {
+	if ((rear + 1) % MaxSize == front)
+		return false;
+	data[rear] = val;
+	rear = (rear + 1) % MaxSize;
+	return true;
+}
+
+boolean Dequeue(int& x) {
+	if (front == rear)
+		return false;
+	x = data[front];
+	front = (front + 1) % MaxSize;
+	return true;
+}

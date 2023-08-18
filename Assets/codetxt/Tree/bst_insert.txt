@@ -1,0 +1,9 @@
+TreeNode Insert(TreeNode T, int x) {
+	if (T == null) 
+		return T = new TreeNode(x);
+	if (x < T.data)
+		T.left = Insert(T.left, x);
+	else
+		T.right = Insert(T.right, x);
+	return T;
+}

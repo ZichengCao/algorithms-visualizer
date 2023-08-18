@@ -1,0 +1,2 @@
+assign arr[5] arr[4]
+assign arr[6] arr[5]

@@ -1,0 +1,23 @@
+int Partiton(int* arr, int left, int right) {
+	int pivot = arr[left];
+	int i = left, j = right;
+	while (i < j) {
+	¦	while (i < j && arr[j] >= pivot)
+	¦		j--;
+	¦	while (i < j && arr[i] <= pivot)
+	¦		i++;
+	¦	if (i != j)
+	¦		swap(arr[i], arr[j]);
+	}
+	if (i != left)
+		swap(arr[left], arr[i]);
+	return i;
+}
+
+void QuickSort(int* arr, int left, int right) {
+	if (left < right) {
+	¦	int k = Partiton(arr, left, right);
+	¦	QuickSort(arr, left, k - 1);
+	¦	QuickSort(arr, k + 1, right);
+	}
+}

@@ -1,0 +1,5 @@
+int pop() {
+	int temp = top.data;
+	top = top.next;
+	return temp;
+}

@@ -1,0 +1,7 @@
+void Inorder(TreeNode T) {
+	if (T.left != null)
+		Inorder(T.left);
+	visit(T);
+	if (T.right != null)
+		Inorder(T.right);
+}

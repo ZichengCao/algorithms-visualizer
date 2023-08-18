@@ -1,0 +1,7 @@
+void remove(int value) {
+	ListNode p = head;
+	while (p.next != null && p.next.data != value) 
+		p = p.next;
+	ListNode temp = p.next;
+	p.next = temp.next;
+}

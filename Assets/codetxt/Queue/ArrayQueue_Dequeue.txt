@@ -1,0 +1,5 @@
+int Dequeue() {
+	int temp = data[front];
+	front = (front + 1) % MaxSize;
+	return temp;
+}

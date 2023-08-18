@@ -1,0 +1,8 @@
+void addFirst(int value) {
+	ListNode s = new ListNode(value);
+	s.next = head.next;
+	s.prior = head;
+	if (head.next != null)
+		head.next.prior = s;
+	head.next = s;
+}

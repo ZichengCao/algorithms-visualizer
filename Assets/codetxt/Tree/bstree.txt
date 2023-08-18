@@ -1,0 +1,19 @@
+TreeNode Search(TreeNode T, int x) {
+	if (T.data == x) 
+		return T;
+	if (x < T.data && T.left)
+		return Search(T.left, x);
+	if (x > T.data && T.right)
+		return Search(T.right, x);
+	return null;
+}
+
+TreeNode Insert(TreeNode T, int x) {
+	if (T == null) 
+		return T = new TreeNode(x);
+	if (x < T.data)
+		T.left = Insert(T.left, x);
+	else
+		T.right = Insert(T.right, x);
+	return T;
+}

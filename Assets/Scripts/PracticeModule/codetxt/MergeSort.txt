@@ -1,0 +1,23 @@
+void Merge(int[] arr, int left, int right) {
+	int[] temp = new int[right - left + 1];
+	int mid = (left + right) / 2;
+	int i = left, j = mid + 1, k = 0;
+	while (i <= mid || j <= right) {
+	¦	if (i <= mid && arr[i] <= arr[j] || j > right)
+	¦		temp[k++] = arr[i++];
+	¦	else
+	¦		temp[k++] = arr[j++];
+	}
+	i = 0;
+	while (left <= right)
+		arr[left++] = temp[i++];
+}
+
+void MergeSort(int[] arr, int left, int right) {
+	if (left < right) {
+	¦	int mid = (left + right) / 2;
+	¦	MergeSort(arr, left, mid);
+	¦	MergeSort(arr, mid + 1, right);
+	¦	Merge(arr, left, right);
+	}
+}

@@ -1,0 +1,7 @@
+void Postorder(TreeNode T) {
+	if (T.left != null)
+		Postorder(T.left);
+	if (T.right != null)
+		Postorder(T.right);
+	visit(T);
+}

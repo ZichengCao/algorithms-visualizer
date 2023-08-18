@@ -1,0 +1,13 @@
+int i 0
+int j 0
+int n arr.length
+while i < n
+assign j 0
+while j < n-i-1
+if arr[j] > arr[j+1]
+swap arr[j] arr[j+1]
+endif
+inc j
+endwhile
+inc i
+endwhile

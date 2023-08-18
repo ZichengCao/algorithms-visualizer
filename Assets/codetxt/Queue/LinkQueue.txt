@@ -1,0 +1,23 @@
+void Enqueue(int val) {
+	if (front == null) {
+		front = rear = new ListNode(val);;
+	}
+	else {
+		ListNode s = new ListNode(val);
+		rear.next = s;
+		rear = s;
+	}
+}
+
+int Dequeue() {
+	int temp = front.data;
+	if (front == rear) {
+		delete front;
+		front = rear = null;
+	}
+	else {
+		ListNode p = front;
+		front = p.next;
+	}
+	return temp;
+}

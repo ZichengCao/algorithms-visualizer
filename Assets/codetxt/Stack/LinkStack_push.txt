@@ -1,0 +1,5 @@
+void push(int data) {
+	ListNode s = new ListNode(data);
+	s.next = top;
+	top = s;
+}

@@ -1,0 +1,8 @@
+void addLast(int value) {
+    ListNode s = new ListNode(value);
+    ListNode p = head;
+    while (p.next != null)
+        p = p.next;
+	s.prior = p;
+    p.next = s;
+}

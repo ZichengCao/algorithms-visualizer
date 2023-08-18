@@ -1,0 +1,20 @@
+TreeNode Remove(TreeNode T,int x) {
+    if (T.data == x) {
+		if (! T.right && !T.left)
+			return null;
+        else if (! T.right || !T.left)     
+            return T.left!= null?T.left:T.right;
+        else{
+			TreeNode p = T.left;
+			while (p.right != null)
+				P = P.right;
+			T.data = p.data;
+			T.left = Remove(T.left, p.data);
+        }
+    }
+    else if (x > T.data) 
+        T.right = Remove(T.right, x);
+    else  
+        T.left = Remove(T.left, x);
+    return T;
+}

@@ -1,0 +1,11 @@
+int i 0
+int n arr.length
+while i < n
+assign arr[i] i
+inc i
+endwhile
+int j 0
+while j < n
+assign arr[j] arr[n-1]
+inc j
+endwhile

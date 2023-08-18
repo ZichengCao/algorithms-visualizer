@@ -1,0 +1,13 @@
+void ShellSort(int[] arr, int n) {
+	for (int div = n / 2; div >= 1; div = div / 2) {
+	¦	for (int i = 0; i < div; i++) {
+	¦	¦	for (int j = div + i; j < n; j += div) {
+	¦	¦	¦	int k = j;
+	¦	¦	¦	while (k >= div && arr[k] < arr[k - div]) {
+	¦	¦	¦	¦	Swap(arr[k - div], arr[k]);
+	¦	¦	¦	¦	k -= div;
+	¦	¦	¦	}
+	¦	¦	}
+	¦	}
+	}
+}

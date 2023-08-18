@@ -1,0 +1,7 @@
+class TreeNode {
+    int data;
+    TreeNode left = null, right = null;
+	TreeNode() {}
+    TreeNode(int x) { data = x; }
+};
+TreeNode Head = new TreeNode();
