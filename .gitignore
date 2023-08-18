@@ -1,0 +1,11 @@
+.vs
+Logs
+UserSettings
+Target
+/[Tt]emp/
+/[Bb]uild/
+/[Bb]uilds/
+/[Pp]rojectSettings/ProjectVersion.txt
+Packages/manifest.json
+
+/Assets/AssetStoreTools*
